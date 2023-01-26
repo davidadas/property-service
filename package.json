@@ -1,0 +1,38 @@
+{
+  "name": "property-service",
+  "version": "1.0.0",
+  "description": "API service for collecting home/property information.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "mocha 'test/**/*.test.js'",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "coverage": "nyc npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidadas/property-service.git"
+  },
+  "author": "David Adams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidadas/property-service/issues"
+  },
+  "homepage": "https://github.com/davidadas/property-service#readme",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "mocha": "^10.2.0",
+    "nock": "^13.3.0",
+    "nyc": "^15.1.0",
+    "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "config": "^3.3.9",
+    "express": "^4.18.2",
+    "express-jwt": "^8.3.0",
+    "node-fetch": "^2.6.8"
+  }
+}

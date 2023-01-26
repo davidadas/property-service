@@ -1,0 +1,7 @@
+.idea/
+.nyc_output/
+coverage
+node_modules
+config/local*
+.DS_Store
+*.log
