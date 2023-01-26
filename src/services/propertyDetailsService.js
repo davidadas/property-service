@@ -26,11 +26,16 @@ const getHouseCanaryDetails = async (params) => {
  * return data back to the controller and inform the decisions controllers must make.
  */
 const getPropertyDetails = async (params) => {
+  // For now, we will assume an 'all or none' requirement for API calls.
+  // This would be something I would otherwise verify with a product owner/manager.
   const propertyDetails = await Promise.all([
     getHouseCanaryDetails(params),
   ]);
 
   return {
+    // Return 'true' if any response from an API call indicates septic.
+    // Normally, though, I'd ask a PM on how to best reconcile this behavior.
+    // This may otherwise indicate that a house has changed its sewage system recently.
     hasSeptic: !!propertyDetails.find(({ hasSeptic }) => hasSeptic),
   };
 };

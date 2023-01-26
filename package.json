@@ -33,6 +33,7 @@
     "config": "^3.3.9",
     "express": "^4.18.2",
     "express-jwt": "^8.3.0",
+    "express-validation": "^4.1.0",
     "node-fetch": "^2.6.8"
   }
 }

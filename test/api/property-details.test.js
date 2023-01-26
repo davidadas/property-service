@@ -91,4 +91,12 @@ describe('Property Details API', () => {
       assert.equal(result.body.hasSeptic, false);
     });
   });
+
+  it('should throw an error if address is > 3 characters', async () => {
+    await request(app)
+      .get('/property')
+      .query({ address: '12' })
+      .set('Authorization', `Bearer ${dummyToken}`)
+      .expect(400);
+  });
 });
