@@ -1,4 +1,4 @@
-const propertyDetailsService = require('./propertyDetailsService');
+const propertyDetailsService = require('./property-details-service');
 
 module.exports = {
   propertyDetailsService,
